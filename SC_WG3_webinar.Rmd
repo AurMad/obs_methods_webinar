@@ -97,7 +97,7 @@ barplot(x, ylim = limy,
 x <- dbinom(0:10, 20, .2)
 barplot(x, ylim = limy,
         names.arg = 0:10,
-        xlab = "Number of test positives out of 100 animals tested", 
+        xlab = "Number of test positives out of 20 animals tested", 
         cex.lab = 1.5)
 ```
 
@@ -114,7 +114,7 @@ barplot(x, ylim = limy,
 x <- dbinom(0:10, 20, .01)
 barplot(x,
         names.arg = 0:10,
-        xlab = "Number of test positives out of 100 animals tested", 
+        xlab = "Number of test positives out of 20 animals tested", 
         cex.lab = 1.5)
 ```
 
@@ -216,6 +216,12 @@ magick::image_read_pdf("./tables/tab_error_1.pdf")
 --
 
 $\Rightarrow$ In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
+
+--
+
+- Bayes' theorem:
+
+$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
 
 ---
 # Output-based standards
@@ -345,10 +351,6 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
  - **Level at which proof of freedom is sought =** herd / region
 
 ---
-## Making inference
-
-
----
 ## Factors affecting the performance of surveillance
 
 - Test characteristics
@@ -360,10 +362,18 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
 ---
 # Test Characteristics
 
-- Sensitivity $\rightarrow$ prob of a positive test result (T) given (|) presence of infection(I)
+- **Sensitivity**: probability of a positive test result ( $T^+$ ) given (|) presence of infection ( $I^+$ )
+
 $$Se = p(T^+|I^+)$$
-- Specificity $\rightarrow$ prob of a negative test result (T) given (|) absence of infection(I)
+
+- **Specificity**: probability of a negative test result ( $T^-$ ) given (|) absence of infection ( $I^-$ )
+
 $$Sp = p(T^-|I^-)$$
+
+
+--
+
+- Defined at the animal / sample level
 
 ---
 # Surveillance components
@@ -459,7 +469,7 @@ $$P_{free} = p(D^-|O^-)$$
 
 ### Multiple-stage cluster sampling
 
-- random number of k herds are selected and a random sample of n animals from each herd are tested
+- random number of $k$ herds are selected and a random sample of $n$ animals from each herd are tested
 
 ---
 # Bayesian hierarchical true prevalence estimation (I)
