@@ -463,24 +463,162 @@ class: inverse, center, middle
 ![](figs/bayesian_hierarchical.png)
 
 ---
-# STOC free model
+# STOC free model - overview
 
 - Objective: prediction of herd-level probabilities of infection
 
+--
 - Input data:
 
  - Longitudinal test result data
  
  - Risk factor data
 
+--
+
+- Modelling framework:
+
+ - Hidden Markov Model
+ 
+ - Bayesian inference and prediction (in Stan)
+
+--
+
+- Model 
+
+ - Available as an [R package](https://github.com/AurMad/STOCfree)
+ 
+ - See [paper](https://www.biorxiv.org/content/10.1101/2020.07.10.197426v6) and [peer-review](https://animsci.peercommunityin.org/articles/rec?id=11)
+
 ---
-# Plan for Grant Period 4
+# STOC free model - modelling framework
 
-## Two Short Term Scientific Missions on methods
+- Objective: prediction of herd-level probabilities of infection from longitudinal test and risk factor data
 
-- Scenario tree modelling: apply the method on data collected from WG2
+- Time discretised into months
 
-- STOC free: apply the method to another disease rather than BVD (depends on data availability)
+- Historical data used for learning, prediction on the last month of data
+
+- Model outcome: (latent) status regarding infection
+
+- Test results and risk factors used as input
+
+![](figs/STOCfree_modelling_framework.png)
+
+
+---
+# STOC free model - Hidden Markov Model
+
+- The STOC free model is a Hidden Markov Model
+
+--
+
+- The model outcome is:
+
+ - discrete `\(\rightarrow\)` infected / uninfected
+ 
+--
+
+ - observed imperfectly `\(\rightarrow\)` sensitivity and specificity
+ 
+![](figs/STOCfree_test_imperfection.png)
+
+---
+# STOC free model - Hidden Markov Model
+
+- The STOC free model is a Hidden Markov Model
+
+- The model outcome is:
+
+ - discrete `\(\rightarrow\)` infected / uninfected
+ 
+ - observed imperfectly `\(\rightarrow\)` sensitivity and specificity
+ 
+ - has a Markovian dynamic `\(\rightarrow\)` probabilities of transitioning between infected and uninfected between consecutive months
+
+![](figs/STOCfree_infection_dynamics.png)
+
+
+---
+# STOC free model - Including risk factors
+
+- Probability of new infection modelled as a function of risk factors using logistic regression
+
+`$$ln\left(\frac{\tau_1}{1 - \tau_1}\right) = X \mathrm{B}$$`
+
+--
+
+- The model:
+
+ - learns strengths of association between risk factors and probability of new infection from historical data
+
+ - uses risk factors to predict probability of new infection on the month of prediction
+
+---
+# STOC free model - Priors
+
+- The Bayesian estimation framework allows to include knwoledge and uncertainty in parameter values in the form of prior distributions
+
+![](figs/STOCfree_priors.png)
+
+
+---
+# STOC free model - Outputs
+
+- The model returns posterior estimates for:
+
+ - all model parameters: Sensitivities, specificities, infection dynamic parameters, strengths of association with risk factors
+ 
+ - predicted probabilities of infection for each herd
+ 
+ 
+--
+
+- Next slide: predicted probabilities of infection:
+
+ - 4 herds with different testing histories
+
+ - **Model 1**: test assumed perfect - no risk factor
+
+ - **Model 2**: imperfect test - no risk factor
+
+ - **Model 3**: test assumed perfect - 1 risk factor (number of animals introduced)
+
+ - **Model 4**: imperfect test - 1 risk factor
+
+---
+
+&lt;img src="figs/STOCfree_model_output.png" style="width: 82%" class="center"/&gt;
+
+
+
+---
+class: inverse, center, middle
+
+# Plans for Grant Period 4
+
+
+---
+
+## Two Short Term Scientific Missions and one virtual mobility
+
+- **Application of the scenario tree method to a cattle disease**
+
+ - in collaboration with WG2
+ 
+ - using data collection tools developed previously
+
+--
+	
+- **Application of the STOC free model to a cattle disease other than BVDV**
+
+ - Looking for an institution with longitudinal test data to host
+ 
+ - Looking for applicants
+ 
+--
+
+- *Virtual mobility on the comparison of the scenario tree method and STOC free model** in terms of context of use and outputs
 
 
 ---
