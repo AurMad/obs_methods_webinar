@@ -17,7 +17,7 @@ options(htmltools.dir.version = FALSE)
 
 class: inverse, center, middle
 
-# Objectives
+# Objectives of the presentation
 
 ---
 # Objectives
@@ -31,7 +31,7 @@ By the end of this presentation, you should understand:
 ---
 class: inverse, center, middle
 
-# Epidemiological and methodological considerations for the estimation of freedom from infection
+# Freedom from infection as a statistical problem
 
 ---
 ## Freedom from infection as a statistical problem
@@ -62,10 +62,6 @@ class: inverse, center, middle
  - **how sure are we that the infection is truly absent given that we did not find it?** or
 
  - **what is the probability of a false negative surveillance outcome?**
-
----
-class: inverse, center, middle
-![](figs/black_swans_popper.jpg)
 
 ---
 ## Freedom from infection as a statistical problem
@@ -162,6 +158,11 @@ $$p(X = 0| n = 20, \pi = 0.01) = 0.818$$
 
 
 ---
+class: inverse, center, middle
+![](figs/black_swans_popper.jpg)
+
+
+---
 ## Freedom from infection as a statistical problem
 
 - Chosen approach: use of a **design prevalence**
@@ -186,7 +187,7 @@ magick::image_read_pdf("./tables/tab_error_1.pdf")
 ```
 
 ---
-# What is a probability, **frequentist version**
+## What is a probability, **frequentist version**
 
 - Probabilities as frequencies of events
 
@@ -199,7 +200,7 @@ magick::image_read_pdf("./tables/tab_error_1.pdf")
 - When estimating prevalence by randomly sampling from a large population, the estimation will get closer to the true prevalence as sample size increases
 
 ---
-# What is a probability, **Bayesian version**
+## What is a probability, **Bayesian version**
 
 - Probabilities as hypotheses derived from evidence, knowledge or belief
 
@@ -224,7 +225,13 @@ $\Rightarrow$ In essence, quantifying a probability of freedom from infection fr
 $$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
 
 ---
+class: inverse, center, middle
+
 # Output-based standards
+
+
+---
+## Output-based standards
 
 - Objective of output-based surveillance: produce outputs that are independent of the input and method of analysis used
 
@@ -249,7 +256,7 @@ magick::image_read_pdf("./tables/tab_error_2.pdf")
 ```
 
 ---
-# Specificity of surveillance
+## Specificity of surveillance
 
 - Probability of a negative surveillance outcome when the infection is absent (true negative):
 
@@ -262,7 +269,7 @@ magick::image_read_pdf("./tables/tab_error_2.pdf")
 ```
 
 ---
-# Sensitivity of surveillance
+## Sensitivity of surveillance
 
 - Probability of a positive surveillance outcome when the infection is present (at the design prevalence)
 
@@ -273,7 +280,7 @@ magick::image_read_pdf("./tables/tab_error_2.pdf")
 ```
 
 ---
-# Probability of freedom from infection
+## Probability of freedom from infection
 
 - Probability that the infection is absent when the outcome of surveillance is negative
 
@@ -289,7 +296,7 @@ magick::image_read_pdf("./tables/tab_error_2.pdf")
   $$P_{free} = \frac{SSp.(1 - \pi_t)}{SSp.(1 - \pi_t) + (1-SSe) . \pi_t}$$
   
 ---
-# Probability of freedom from infection
+## Probability of freedom from infection
 
 - Probability that the infection is absent when the outcome of surveillance is negative
 
@@ -305,7 +312,7 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
   $$P_{free} = \frac{1 - \pi_t}{1-SSe.\pi_t}$$
 
 ---
-# Expected cost of error
+## Expected cost of error
 
 - Estimation of the cost of undetected infections
 
@@ -324,7 +331,7 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
 
 
 ---
-# Other outputs
+## Other outputs
 
 - More recently, indicators of early detection considered, although not strictly related to infection freedom
 
@@ -332,6 +339,10 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
 
 ![](figs/outputs.png)
 
+---
+class: inverse, center, middle
+
+# Disease prevalence context and surveillance objectives
 
 ---
 ## Impact of disease prevalence context on surveillance objectives
@@ -350,6 +361,12 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
  
  - **Level at which proof of freedom is sought =** herd / region
 
+
+---
+class: inverse, center, middle
+
+# Factors affecting the performance of surveillance
+
 ---
 ## Factors affecting the performance of surveillance
 
@@ -360,7 +377,7 @@ magick::image_read_pdf("./tables/tab_error_3.pdf")
 - Frequency of testing
 
 ---
-# Test Characteristics
+## Test Characteristics
 
 - **Sensitivity**: probability of a positive test result ( $T^+$ ) given (|) presence of infection ( $I^+$ )
 
@@ -376,12 +393,12 @@ $$Sp = p(T^-|I^-)$$
 - Defined at the animal / sample level
 
 ---
-# Surveillance components
+## Surveillance components
 
 ![](figs/surveillance_components.png)
 
 ---
-# Frequency of testing
+## Frequency of testing
 
 ![](figs/frequency_testing.png)
 
@@ -644,7 +661,7 @@ class: inverse, center, middle
  
 --
 
-- *Virtual mobility on the comparison of the scenario tree method and STOC free model** in terms of context of use and outputs
+- **Virtual mobility on the comparison of the scenario tree method and STOC free model** in terms of context of use and outputs
 
 
 ---
