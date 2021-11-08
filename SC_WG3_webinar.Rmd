@@ -515,7 +515,7 @@ $$P_{free} = p(D^-|O^-)$$
 --
 - Input data:
 
- - Longitudinal test result data
+ - Herd-level longitudinal test result data
  
  - Risk factor data
 
