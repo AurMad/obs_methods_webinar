@@ -491,6 +491,13 @@ $$P_{free} = p(D^-|O^-)$$
 ---
 # STOC free model
 
+- Objective: prediction of herd-level probabilities of infection
+
+- Input data:
+
+ - Longitudinal test result data
+ 
+ - Risk factor data
 
 ---
 # Plan for Grant Period 4
