@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 
 # Output-based methodological approaches for substantiating freedom from infection
 ## SOUND control - Working group 3
-### 2021-11-09 (updated: 2021-11-05)
+### 2021-11-09 (updated: 2021-11-08)
 
 ---
 
@@ -180,7 +180,7 @@ class: inverse, center, middle
  
 --
 
-- When estimating prevalence by randomly sampling from a large population, the estimation will get closer and closer to the true prevalence as sample size increases
+- When estimating prevalence by randomly sampling from a large population, the estimation will get closer to the true prevalence as sample size increases
 
 ---
 # What is a probability, **Bayesian version**
@@ -196,6 +196,16 @@ class: inverse, center, middle
 --
 
 - Rare / emerging events have small probabilities of occurrence that prevent the estimation of frequencies 
+
+--
+
+`\(\Rightarrow\)` In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
+
+--
+
+- Bayes' theorem:
+
+`$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$`
 
 ---
 # Output-based standards
@@ -279,6 +289,14 @@ class: inverse, center, middle
 
  `$$TSC = Cost_{surveillance}+(1 - P_{free}).Cost_{error}$$`
 
+--
+- Who is paying?
+
+ - Cost for the seller or buyer?
+
+ - Spread of infection, public health, lost markets `\(\ldots\)`
+
+
 ---
 # Other outputs
 
@@ -307,17 +325,6 @@ class: inverse, center, middle
  - **Level at which proof of freedom is sought =** herd / region
 
 ---
-## Making inference
-
-
----
-
-=======
-## Diversity in surveillance programmes
-
-
----
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 405d207fe5fefe46b6ba79b2bd68b9706cf9308f
 ## Factors affecting the performance of surveillance
 
 - Test characteristics
@@ -329,10 +336,18 @@ class: inverse, center, middle
 ---
 # Test Characteristics
 
-- Sensitivity `\(\rightarrow\)` prob of a posive test result (T) given (|) presence of infection(I)
+- **Sensitivity**: probability of a positive test result ( `\(T^+\)` ) given (|) presence of infection ( `\(I^+\)` )
+
 `$$Se = p(T^+|I^+)$$`
-- Specificity `\(\rightarrow\)` prob of a negative test result (T) given (|) absence of infection(I)
+
+- **Specificity**: probability of a negative test result ( `\(T^-\)` ) given (|) absence of infection ( `\(I^-\)` )
+
 `$$Sp = p(T^-|I^-)$$`
+
+
+--
+
+- Defined at the animal / sample level
 
 ---
 # Surveillance components
@@ -343,23 +358,18 @@ class: inverse, center, middle
 # Frequency of testing
 
 ![](figs/frequency_testing.png)
+
 ---
-=======
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 405d207fe5fefe46b6ba79b2bd68b9706cf9308f
 class: inverse, center, middle
 # Methods for output-based surveillance
+
 
 ---
 # Objectives of this section
 
-
 - review state-of-the-art methods used for output-based surveillance
-=======
-- review state of the art methods used for output-based surveillance
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 405d207fe5fefe46b6ba79b2bd68b9706cf9308f
-
 ---
-## Secenario tree modelling (I)
+# Scenario tree modelling (I)
 
 - Method to estimate probability of freedom from infection 
 
@@ -368,7 +378,7 @@ class: inverse, center, middle
 - Described in Martin et al (2007)
 
 ---
-# Secenario tree modelling (II)
+# Scenario tree modelling (II)
 
 ### Output `\(\rightarrow\)` Surveillance sensitivity
 
@@ -380,43 +390,35 @@ class: inverse, center, middle
 
 `$$P_{free} = p(D^-|O^-)$$`
 ---
-## Scenario Tree modelling (III)
+# Scenario Tree modelling (III)
 
 ![](figs/scenario_tree_figure.png)
-=======
-- Described in Martin et al (2007)
 
 ---
-## Secenario tree modelling (II)
-
-- Applied in free from infection countries
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 405d207fe5fefe46b6ba79b2bd68b9706cf9308f
-
----
-## Bayesian Belief Networks (I)
+# Bayesian Belief Networks (I)
 
 - Method to estimate probability of freedom from infection
 
 - (+) Applied to complex surveillance schemes (multiple surveillance components)
 
-- Simple application of the Bayes theorem: joint probability distirubtion for a set of variables
+- Simple application of the Bayes theorem: joint probability distribution for a set of variables
 
 - Described in Hood et al (2009)
 
 ---
-## Bayesian Belief Networks (II)
+# Bayesian Belief Networks (II)
 
 - Probabilistic graphical model 
 
 - Variables `\(\rightarrow\)` nodes
-- Relationshop between variables/Dependence `\(\rightarrow\)` edges/arcs
+- Relationship between variables/Dependence `\(\rightarrow\)` edges/arcs
 
 ---
-## Bayesian Belief Networks (III)
+# Bayesian Belief Networks (III)
 
 ![](figs/bayesian_network.png)
 ---
-## Simulation models (I)
+# Simulation models (I)
 
 - presence or spread of diseases and their detection with a great flexibility in terms of the range and complexity of assumptions
 
@@ -425,7 +427,7 @@ class: inverse, center, middle
 - Described in Meyer et al (2019); Rosendal et al (2020)
 
 ---
-## Simulation models (II)
+# Simulation models (II)
 
 ![](figs/simulation_methods_new.jpg)
 ---
@@ -433,16 +435,16 @@ class: inverse, center, middle
 
 ## Historical context
 
-- Modelling the diversity of surveillance programmes in an output-based framework may result in overparameterization
+- Modelling the diversity of surveillance programmes in an output-based framework may result in over-parameterization
 
 - Cattle population can be considered structured in the following levels: Country / Region / Herd / Animal
 
 ---
-## General approaches
+# General approaches
 
 ### Multiple-stage cluster sampling
 
-- random number of k herds are selected and a random sample of n animals from each herd are tested
+- random number of `\(k\)` herds are selected and a random sample of `\(n\)` animals from each herd are tested
 
 ---
 # Bayesian hierarchical true prevalence estimation (I)
@@ -461,8 +463,15 @@ class: inverse, center, middle
 ![](figs/bayesian_hierarchical.png)
 
 ---
-## STOC free model
+# STOC free model
 
+- Objective: prediction of herd-level probabilities of infection
+
+- Input data:
+
+ - Longitudinal test result data
+ 
+ - Risk factor data
 
 ---
 # Plan for Grant Period 4
@@ -471,14 +480,13 @@ class: inverse, center, middle
 
 - Scenario tree modelling: apply the method on data collected from WG2
 
-- STOC free: apply the method to another disease rathen than BVD (depends on data availability)
+- STOC free: apply the method to another disease rather than BVD (depends on data availability)
 
 
 ---
 # Thank you for your attention
 
 ![](figs/sound_control.png)
-
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
