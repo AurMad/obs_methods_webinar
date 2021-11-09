@@ -1,7 +1,7 @@
 ---
 title: "Output-based methodological approaches for substantiating freedom from infection"
 subtitle: "SOUND control - Working group 3"
-date: "2021-11-09"
+date: "2021-11-09 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -152,9 +152,9 @@ $$p(X = 0| n = 20, \pi = 0.01) = 0.818$$
 
 - But usually, the **true prevalence** is not known
 
- - We now how to estimate $p(X = 0|n, \pi)$
+ - We know how to estimate $p(X = 0|n, \pi)$
  
- - We would like to know $p(\pi = 0| X = 0, n)$
+ - We would like to know $p(\pi = 0 | X = 0, n)$
 
 
 ---
@@ -216,13 +216,13 @@ magick::image_read_pdf("./tables/tab_error_1.pdf")
 
 --
 
-$\Rightarrow$ In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: what is the probability of absence of infection given the data and the assumptions made?
+$\Rightarrow$ In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
 
 --
 
 - Bayes' theorem:
 
-$$p(\pi|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
+$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
 
 ---
 class: inverse, center, middle
@@ -395,12 +395,28 @@ $$Sp = p(T^-|I^-)$$
 - Defined at the animal / sample level
 
 ---
-## Surveillance components
+# Surveillance components (I)
+
+- Structure of population is important
+
+- Prob of infection different betweeen Regions/Farms/within-farm groups
+
+- Prob of introducing infection different between Regions/Farms/within-farm groups
+
+---
+# Surveillance components (II)
 
 ![](figs/surveillance_components.png)
 
 ---
-## Frequency of testing
+# Frequency of testing (I)
+
+- $\searrow$ frequence $\rightarrow$ Longer interval between infection introduction - detection
+
+- Frequency of testing: depends on infection dynamics/test method implemented
+
+---
+# Frequency of testing (II)
 
 ![](figs/frequency_testing.png)
 
@@ -418,7 +434,11 @@ class: inverse, center, middle
 
 - Method to estimate probability of freedom from infection 
 
-- (+) quantitative estimates (-) applied only in settings where infection is (assumed to be) absent
+- (+) quantitative estimates
+
+- (-) applied only in settings where infection is (assumed to be) absent
+
+- Reference method
 
 - Described in Martin et al (2007)
 
@@ -480,9 +500,13 @@ $$P_{free} = p(D^-|O^-)$$
 
 ## Historical context
 
-- Modelling the diversity of surveillance programmes in an output-based framework may result in over-parameterization
+- Modelling the diversity of surveillance programmes is "a bit" challenging
+
+- Hierarchical modelling can be applied when multiple parameters are to be estimated that are regarded related/connected by the structure of the problem
 
 - Cattle population can be considered structured in the following levels: Country / Region / Herd / Animal
+
+- e.g. Estimate animal-level prevalence given (conditional) that infection is present in the herd / region
 
 ---
 # General approaches
@@ -494,7 +518,7 @@ $$P_{free} = p(D^-|O^-)$$
 ---
 # Bayesian hierarchical true prevalence estimation (I)
 
-- (+) Assumes absence of a perfect reference test
+- (+) Can take into account the absence of a perfect reference test
 
 - (+) Can be applied both in cases where infection is present or absent
 
