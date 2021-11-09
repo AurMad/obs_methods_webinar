@@ -1,7 +1,7 @@
 ---
 title: "Output-based methodological approaches for substantiating freedom from infection"
 subtitle: "SOUND control - Working group 3"
-date: "2021-11-09 (updated: `r Sys.Date()`)"
+date: "2021-11-09"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -216,13 +216,13 @@ magick::image_read_pdf("./tables/tab_error_1.pdf")
 
 --
 
-$\Rightarrow$ In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
+$\Rightarrow$ In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: what is the probability of freedom from infection given the data and the assumptions made?
 
 --
 
 - Bayes' theorem:
 
-$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
+$$p(\pi|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$
 
 ---
 class: inverse, center, middle

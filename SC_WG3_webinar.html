@@ -3,6 +3,8 @@
   <head>
     <title>Output-based methodological approaches for substantiating freedom from infection</title>
     <meta charset="utf-8" />
+    <meta name="date" content="2021-11-09" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
@@ -12,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Output-based methodological approaches for substantiating freedom from infection
 ## SOUND control - Working group 3
-### 2021-11-09 (updated: 2021-11-09)
+### 2021-11-09
 
 ---
 
@@ -167,7 +169,7 @@ class: inverse, center, middle
  
  - Construct confidence intervals, estimate probabilities of error from these hypotheses
 
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-4-1.png" width="2096" /&gt;
 
 ---
 ## What is a probability, **frequentist version**
@@ -199,13 +201,13 @@ class: inverse, center, middle
 
 --
 
-`\(\Rightarrow\)` In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
+`\(\Rightarrow\)` In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: what is the probability of freedom from infection given the data and the assumptions made?
 
 --
 
 - Bayes' theorem:
 
-`$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$`
+`$$p(\pi|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$`
 
 ---
 class: inverse, center, middle
@@ -234,7 +236,7 @@ class: inverse, center, middle
 
 --
 
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-5-1.png" width="1767" /&gt;
 
 ---
 ## Specificity of surveillance
@@ -245,7 +247,7 @@ class: inverse, center, middle
 
  - Usually assumed to be 1 (i.e. no false positive) `\(\rightarrow\)` every positive test will be investigated until either proven to be a false positive or confirmed as a true positive
  
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-6-1.png" width="1767" /&gt;
 
 ---
 ## Sensitivity of surveillance
@@ -254,7 +256,7 @@ class: inverse, center, middle
 
  `$$SSe = p(O^+|D^+)$$`
 
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-7-1.png" width="1767" /&gt;
 
 ---
 ## Probability of freedom from infection
@@ -264,7 +266,7 @@ class: inverse, center, middle
   `$$P_{free} = p(D^-|O^-)$$`
 
 
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-8-1.png" width="1767" /&gt;
 
 - is in fact the negative predictive value
 
@@ -278,7 +280,7 @@ class: inverse, center, middle
   `$$P_{free} = p(D^-|O^-)$$`
 
 
-![](SC_WG3_webinar_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-9-1.png" width="1719" /&gt;
 
 - since `\(SSp = 1\)`, can be written as:
 
@@ -692,6 +694,7 @@ class: inverse, center, middle
 # Thank you for your attention
 
 .center[![](figs/sound_control.png)]
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
