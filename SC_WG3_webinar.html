@@ -3,8 +3,6 @@
   <head>
     <title>Output-based methodological approaches for substantiating freedom from infection</title>
     <meta charset="utf-8" />
-    <meta name="date" content="2021-11-09" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
@@ -14,7 +12,7 @@ class: center, middle, inverse, title-slide
 
 # Output-based methodological approaches for substantiating freedom from infection
 ## SOUND control - Working group 3
-### 2021-11-09
+### 2021-11-09 (updated: 2021-11-09)
 
 ---
 
@@ -139,9 +137,9 @@ class: inverse, center, middle
 
 - But usually, the **true prevalence** is not known
 
- - We now how to estimate `\(p(X = 0|n, \pi)\)`
+ - We know how to estimate `\(p(X = 0|n, \pi)\)`
  
- - We would like to know `\(p(\pi = 0| X = 0, n)\)`
+ - We would like to know `\(p(\pi = 0 | X = 0, n)\)`
 
 
 ---
@@ -169,7 +167,7 @@ class: inverse, center, middle
  
  - Construct confidence intervals, estimate probabilities of error from these hypotheses
 
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-4-1.png" width="2096" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 
 ---
 ## What is a probability, **frequentist version**
@@ -201,13 +199,13 @@ class: inverse, center, middle
 
 --
 
-`\(\Rightarrow\)` In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: what is the probability of absence of infection given the data and the assumptions made?
+`\(\Rightarrow\)` In essence, quantifying a probability of freedom from infection from absence of evidence of presence can be seen as a Bayesian problem: how consistent are the data with the assumptions made?
 
 --
 
 - Bayes' theorem:
 
-`$$p(\pi|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$`
+`$$p(\pi=0|X) = \frac{p(X|\pi)p(\pi)}{p(X)}$$`
 
 ---
 class: inverse, center, middle
@@ -236,7 +234,7 @@ class: inverse, center, middle
 
 --
 
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-5-1.png" width="1767" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 ---
 ## Specificity of surveillance
@@ -247,7 +245,7 @@ class: inverse, center, middle
 
  - Usually assumed to be 1 (i.e. no false positive) `\(\rightarrow\)` every positive test will be investigated until either proven to be a false positive or confirmed as a true positive
  
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-6-1.png" width="1767" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
 
 ---
 ## Sensitivity of surveillance
@@ -256,7 +254,7 @@ class: inverse, center, middle
 
  `$$SSe = p(O^+|D^+)$$`
 
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-7-1.png" width="1767" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
 ---
 ## Probability of freedom from infection
@@ -266,7 +264,7 @@ class: inverse, center, middle
   `$$P_{free} = p(D^-|O^-)$$`
 
 
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-8-1.png" width="1767" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
 
 - is in fact the negative predictive value
 
@@ -280,7 +278,7 @@ class: inverse, center, middle
   `$$P_{free} = p(D^-|O^-)$$`
 
 
-&lt;img src="SC_WG3_webinar_files/figure-html/unnamed-chunk-9-1.png" width="1719" /&gt;
+![](SC_WG3_webinar_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
 
 - since `\(SSp = 1\)`, can be written as:
 
@@ -370,12 +368,28 @@ class: inverse, center, middle
 - Defined at the animal / sample level
 
 ---
-## Surveillance components
+# Surveillance components (I)
+
+- Structure of population is important
+
+- Prob of infection different betweeen Regions/Farms/within-farm groups
+
+- Prob of introducing infection different between Regions/Farms/within-farm groups
+
+---
+# Surveillance components (II)
 
 ![](figs/surveillance_components.png)
 
 ---
-## Frequency of testing
+# Frequency of testing (I)
+
+- `\(\searrow\)` frequence `\(\rightarrow\)` Longer interval between infection introduction - detection
+
+- Frequency of testing: depends on infection dynamics/test method implemented
+
+---
+# Frequency of testing (II)
 
 ![](figs/frequency_testing.png)
 
@@ -393,7 +407,11 @@ class: inverse, center, middle
 
 - Method to estimate probability of freedom from infection 
 
-- (+) quantitative estimates (-) applied only in settings where infection is (assumed to be) absent
+- (+) quantitative estimates
+
+- (-) applied only in settings where infection is (assumed to be) absent
+
+- Reference method
 
 - Described in Martin et al (2007)
 
@@ -455,9 +473,13 @@ class: inverse, center, middle
 
 ## Historical context
 
-- Modelling the diversity of surveillance programmes in an output-based framework may result in over-parameterization
+- Modelling the diversity of surveillance programmes is "a bit" challenging
+
+- Hierarchical modelling can be applied when multiple parameters are to be estimated that are regarded related/connected by the structure of the problem
 
 - Cattle population can be considered structured in the following levels: Country / Region / Herd / Animal
+
+- e.g. Estimate animal-level prevalence given (conditional) that infection is present in the herd / region
 
 ---
 # General approaches
@@ -469,7 +491,7 @@ class: inverse, center, middle
 ---
 # Bayesian hierarchical true prevalence estimation (I)
 
-- (+) Assumes absence of a perfect reference test
+- (+) Can take into account the absence of a perfect reference test
 
 - (+) Can be applied both in cases where infection is present or absent
 
@@ -670,7 +692,6 @@ class: inverse, center, middle
 # Thank you for your attention
 
 .center[![](figs/sound_control.png)]
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
